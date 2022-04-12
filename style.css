@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  color: rgba(252, 233, 90, 1);
+  stroke: 2px qblack;
+  background-image: url("assets/Mar20_05_1187745190.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+  font-family: inherit;
+}
+
+.container1 {
+  display: block;
+  float: left;
+  top: 0;
+  color: white;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.form {
+  position: relative;
+}
+
+#input1,
+#input2,
+#addToDo {
+  text-align: center;
+  background: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+label {
+  position: absolute;
+  color: bisque;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+
+#addToDo{
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+#h1 {
+  font-size: 20px;
+}
+
+/* grids */
+
+.item1 {
+  grid-area: clock;
+}
+
+.item2 {
+  grid-area: name;
+}
+
+.item3 {
+  grid-area: focus;
+}
+
+.item4 {
+  grid-area: messages;
+}
+
+.item5 {
+  grid-area: quote;
+}
+
+.item6 {
+  grid-area: todo;
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "clock . . . ."
+  "name name name name name"
+  "focus focus focus focus focus"
+  "messages messages messages messages messages"
+  "quote quote quote quote quote"
+  ". . todo . ."
+}
+div.item6 {
+  display:block;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(201, 197, 248, 0.8),
+  rgba(97, 174, 252, 0.8),
+  rgba(246, 247, 248, 0.8));
+  padding-bottom: 5px;
+}
+div.item4 {
+  color: rgba(250, 211, 3, 0.98);
+}
+
+#random {
+  color: rgba(250, 211, 3, 0.98);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+}
