@@ -74,35 +74,22 @@ let quotes = [
   "Commit to the Lord whatever you do, and you will SUCCEED  - Proverbs 16:3",
   "Make HAPPINESS a HABIT  - Anonymous",
 ];
-const arr = []
 
-const btn3 = document.getElementById('btn3')
-btn3.addEventListener("click", e => {
-  // console.log("test")
-  const a = document.getElementById("input3").innerText;
-  console.log(a)
-  const id = setInterval(randomQuote, 10000)
-  arr.push(id)
-})
+const inputVal = document.getElementById("input3");
+setInterval(randomQuote, 10000);
 
+document.getElementById("btn3").addEventListener("click", function () {
+  if (inputVal.value.length > 0){
+  quotes.push(inputVal.value);
+  }
+  inputVal.value = "";
+});
 function randomQuote() {
   let randomQuotes = Math.floor(Math.random() * quotes.length);
-  let items = (document.getElementById("random").innerHTML =
-    quotes[randomQuotes]);
-if (arr.length > 1){
-  clearInterval(arr[0])
-  arr.shift()
-}
-  let input3Value = document.getElementById("input3").value;
-  if (input3Value.length > 0) {
-    quotes.push(input3Value);
-  }
-  // input3Value = ""
-
-  console.log(quotes)
+  const items = document.getElementById("random");
+  items.innerHTML = quotes[randomQuotes];
 }
 randomQuote();
-
 
 // user Story 6
 document.querySelector("#btn4").onclick = function () {
